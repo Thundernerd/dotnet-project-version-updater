@@ -38,7 +38,9 @@ const updater_1 = __importDefault(__nccwpck_require__(45));
 async function run() {
     try {
         const filePath = Core.getInput("file");
-        const newVersion = Core.getInput("version");
+        var newVersion = Core.getInput("version");
+        if (newVersion.startsWith('v'))
+            newVersion = newVersion.substring(1);
         console.log(`File path: ${filePath}`);
         console.log(`New version: ${newVersion}`);
         const updateResult = await updater_1.default.update(filePath, newVersion);
