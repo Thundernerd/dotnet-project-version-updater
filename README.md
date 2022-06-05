@@ -1,6 +1,8 @@
-# .NET project version updater
+# dotnet project version updater
 
 A GitHub action to update or bump project versions in .csproj, .cs, and .nuspec files.
+
+Forked from: https://github.com/vers-one/dotnet-project-version-updater
 
 Supports:
 
@@ -66,7 +68,7 @@ jobs:
 
       - name: Set MyProject.csproj version
         id: update
-        uses: vers-one/dotnet-project-version-updater@v1.0
+        uses: Thundernerd/dotnet-project-version-updater@v1.2
         with:
           file: "src/MyProject.csproj"
           version: ${{ github.event.inputs.version }}
@@ -102,19 +104,19 @@ jobs:
 
       - name: Set MyProject.csproj version
         id: update
-        uses: vers-one/dotnet-project-version-updater@v1.0
+        uses: Thundernerd/dotnet-project-version-updater@v1.2
         with:
           file: "src/MyProject.csproj"
           version: ${{ github.event.inputs.version }}
 
       - name: Set AssemblyInfo.cs version
-        uses: vers-one/dotnet-project-version-updater@v1.0
+        uses: Thundernerd/dotnet-project-version-updater@v1.2
         with:
           file: "src/Properties/AssemblyInfo.cs"
           version: ${{ github.event.inputs.version }}
 
       - name: Set MyProject.nuspec version
-        uses: vers-one/dotnet-project-version-updater@v1.0
+        uses: Thundernerd/dotnet-project-version-updater@v1.2
         with:
           file: "src/MyProject.nuspec"
           version: ${{ github.event.inputs.version }}
@@ -157,7 +159,7 @@ jobs:
 
       - name: Bump build version
         id: bump
-        uses: vers-one/dotnet-project-version-updater@v1.0
+        uses: Thundernerd/dotnet-project-version-updater@v1.2
         with:
           file: "src/MyProject.csproj"
           version: bump-build
