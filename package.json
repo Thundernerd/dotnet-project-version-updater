@@ -1,5 +1,5 @@
 {
-  "name": "dotnet-project-version-updater",
+  "name": "net.tnrd.dotnet-project-version-updater",
   "version": "1.1.0",
   "description": "A GitHub action to update project versions in .csproj and .nuspec files",
   "main": "lib/index.js",
@@ -9,19 +9,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vers-one/dotnet-project-version-updater.git"
+    "url": "git+https://github.com/Thundernerd/dotnet-project-version-updater.git"
   },
   "keywords": [
     "actions",
     "dotnet",
     "version"
   ],
-  "author": "vers-one",
+  "author": "TNRD",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vers-one/dotnet-project-version-updater/issues"
+    "url": "https://github.com/Thundernerd/dotnet-project-version-updater/issues"
   },
-  "homepage": "https://github.com/vers-one/dotnet-project-version-updater",
+  "homepage": "https://github.com/Thundernerd/dotnet-project-version-updater",
   "dependencies": {
     "@actions/core": "^1.7.0",
     "@actions/github": "^5.0.1"
