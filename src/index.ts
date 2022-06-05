@@ -6,7 +6,9 @@ async function run(): Promise<void>
     try
     {
         const filePath: string = Core.getInput("file");
-        const newVersion: string = Core.getInput("version");
+        var newVersion: string = Core.getInput("version");
+        if (newVersion.startsWith('v'))
+            newVersion = newVersion.substring(1);
         console.log(`File path: ${filePath}`);
         console.log(`New version: ${newVersion}`);
         const updateResult: UpdateResult = await Updater.update(filePath, newVersion); 
